@@ -21,7 +21,7 @@ jobs:
       uses: azure/CLI@v1
       with:
         inlineScript: |
-           az cdn endpoint purge --content-paths  "/*" --profile-name "resume" --name "https://ebamfo9.azureedge.net" --resource-group "cloud-resume-challenge-chunk-1"
+           az cdn endpoint purge --content-paths  "/*" --profile-name "resume" --name "ebamfo9.azureedge.net" --resource-group "cloud-resume-challenge-chunk-1"
     # Azure logout
     - name: logout
       run: |
