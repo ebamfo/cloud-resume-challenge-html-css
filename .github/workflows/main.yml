@@ -16,7 +16,7 @@ jobs:
       uses: azure/CLI@v1
       with:
         inlineScript: |
-            az storage blob upload-batch --account-name ebamfo9 --overwrite true --auth-mode key -d '$web' -s . --pattern .*error.*|.*resume.*
+            az storage blob upload-batch --account-name ebamfo9 --overwrite true --auth-mode key -d '$web' -s . --pattern *icons*|*styles*|*resume.html*|*error.html*
     - name: Purge CDN endpoint
       uses: azure/CLI@v1
       with:
