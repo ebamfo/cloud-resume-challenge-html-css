@@ -12,6 +12,7 @@ jobs:
     - uses: azure/login@v1
       with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
+      #Remove README, .git and .github file before uploading content to azure blob
     - name: Remove README.md .git and .github file
       run: rm -rf README.md .git*
     - name: Upload to blob storage
