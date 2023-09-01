@@ -12,8 +12,8 @@ jobs:
     - uses: azure/login@v1
       with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
-    - name: Remove README file
-      run: rm -rf README.md
+    - name: Remove README.md .git and .github file
+      run: rm -rf README.md .git*
     - name: Upload to blob storage
       uses: azure/CLI@v1
       with:
